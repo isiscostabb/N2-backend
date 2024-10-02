@@ -21,6 +21,11 @@ public class CatController {
         this.catService = catService;
     }
 
+    @GetMapping("/cat")
+    public String getCatMessage() {
+        return "Vamos verificar o status http com gatos!";
+    }
+
     @PostMapping("/http")
     @ResponseBody
     public Map<String, Object> getHttpCat(@RequestBody Map<String, Integer> requestBody) {
@@ -33,5 +38,13 @@ public class CatController {
         response.put("cat_image_url", url);
 
         return response;
+    }
+
+    @GetMapping("/sobre")
+    public Map<String, String> getSobreInfo() {
+        Map<String, String> info = new HashMap<>();
+        info.put("estudante", "Isis Costa Bez Birolo");
+        info.put("projeto", "N2 backend");
+        return info;
     }
 }
