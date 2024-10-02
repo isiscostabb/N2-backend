@@ -7,8 +7,11 @@ import N2backend.service.CatService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
-@RequestMapping("/cat")
+@RequestMapping
 public class CatController {
 
     private final CatService catService;
@@ -18,15 +21,17 @@ public class CatController {
         this.catService = catService;
     }
 
-    @GetMapping("/http")
+    @PostMapping("/http")
     @ResponseBody
-    public String getHttpCat(@RequestParam("status_code") int statusCode) {
+    public Map<String, Object> getHttpCat(@RequestBody Map<String, Integer> requestBody) {
+        int statusCode = requestBody.get("status_code");
         String url = catService.getCatImageUrl(statusCode);
-        return "<html>" +
-                "<body>" +
-                "<h1>HTTP Status Cat " + statusCode + "</h1>" +
-                "<img src='" + url + "' alt='HTTP Cat'/>" +
-                "</body>" +
-                "</html>";
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("status_code", statusCode);
+        response.put("message", "HTTP Status Cat " + statusCode);
+        response.put("cat_image_url", url);
+
+        return response;
     }
 }

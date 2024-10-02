@@ -1,5 +1,5 @@
 
-//lógica (retornar resultado com base no link da API)
+//lógica
 
 package N2backend.service;
 
