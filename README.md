@@ -9,13 +9,13 @@
 - Dentro do arquivo principal (<kbd>N2backendApplication.java</kbd>) rode o projeto
 
 
-- No navegador escreva: <kbd>http://localhost:8080/cat/http?status_code=</kbd>, e após o "=", escreva o número correspondente ao tipo de status HTTP para verificar do que se trata
+- No navegador escreva: <kbd>http://localhost:8080/http?status_code=</kbd>, e após o "=", escreva o número correspondente ao tipo de status HTTP para verificar do que se trata
 
 <br>
 <br>
 
 <h2>EXEMPLO REQUISIÇÃO E RESPOSTA</h2>
-http://localhost:8080/cat/http?status_code=599
+http://localhost:8080/http?status_code=599
 
 <br>
 <br>
