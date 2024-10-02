@@ -9,18 +9,17 @@
 - Dentro do arquivo principal (<kbd>N2backendApplication.java</kbd>) rode o projeto
 
 
-- No navegador escreva: <kbd>http://localhost:8080/http?status_code=</kbd>, e após o "=", escreva o número correspondente ao tipo de status HTTP para verificar do que se trata
+- No insomnia crie uma nova HTTP Request, escolha o método POST e digite a URL: http://localhost:8080/http
+- Na parte do BODY, escolha a opcão JSON e escreva: {"status_code": }, e após os dois pontos escreva o número correspondente ao status http que deseja verificar
 
 <br>
 <br>
 
 <h2>EXEMPLO REQUISIÇÃO E RESPOSTA</h2>
-http://localhost:8080/http?status_code=599
 
-<br>
-<br>
+![Captura de Tela (64)](https://github.com/user-attachments/assets/b38c69db-23d2-413b-b9c7-0e0501f31c14)
 
-![Captura de Tela (63)](https://github.com/user-attachments/assets/f041d13c-808a-438c-a49c-7ad9b21aa0b7)
+
 
 <br>
 <br>
