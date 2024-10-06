@@ -41,10 +41,11 @@ public class CatController {
     }
 
     @GetMapping("/sobre")
-    public Map<String, String> getSobreInfo() {
-        Map<String, String> info = new HashMap<>();
-        info.put("estudante", "Isis Costa Bez Birolo");
-        info.put("projeto", "N2 backend");
-        return info;
+    @ResponseBody
+    public HashMap<String, String> sobre() {
+        HashMap<String, String> sobre = new HashMap<>();
+        sobre.put("projeto", "N2 backend");
+        sobre.put("estudante", "Isis Costa Bez Birolo");
+        return sobre;
     }
 }
